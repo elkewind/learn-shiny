@@ -1,0 +1,89 @@
+---
+title: "EDS 430 Intro to Shiny"
+author: "Elke Windschitll"
+date: "2023-01-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What is Shiny?
+
+Interactive web pages built by people who love to code in R
+
+Shiny makes building web apps easy
+
+### Anatomy
+
+UI + Server = App
+
+Widgets are web elements that users can interact with via the UI
+
+Reactivity:
+
+1.  Widget gets info from user
+2.  Update df used to create outputs based on user choice
+3.  Create updated outputs from new df
+4.  Render that ouput in the UI
+
+### Getting Started
+
+Shiny comes with some examples that display source code
+
+```{r}
+library(shiny)
+runExample(example = NA)
+runExample(example = "01_hello")
+```
+
+![](images/Screen%20Shot%202023-01-20%20at%209.34.58%20AM.png)
+
+Note: app.R file gets really long and unruly, so splitting it up may be best
+
+### Single file apps
+
+Need ui section, server section, combined section
+
+Used tags\$... to stylize
+
+Inputs and outputs: functions for each
+
+eg. sliderInput, plotOutput
+
+Output functions have corresponding render functions
+
+Reactive data frames need to be followed by ()
+
+### Steps for Creating Reactivity
+
+1.  Add an input to the UI (Xinput())
+2.  Add an output to the UI (Xoutput())
+3.  Tell the server how to assemble inputs into outputs
+
+**Rules:**
+
+1.  Save objects you want to display to output\$\<id\>
+2.  Build reactive objects using a renderX() function
+3.  access input values with input\$\<id\>
+
+### Two file apps
+
+global.R file can help keep code organized, reduce redundant code, increase speed, etc. It houses
+
+-   packages
+
+-   importing data
+
+-   sourcing scripts
+
+-   data wrangling
+
+-   building custom ggplot themes
+
+-   etc.
+
+Use layout functions, sometimes nested, refer to resources to construct
+
+Can use package ARTofR to stay organized
