@@ -87,3 +87,7 @@ global.R file can help keep code organized, reduce redundant code, increase spee
 Use layout functions, sometimes nested, refer to resources to construct
 
 Can use package ARTofR to stay organized
+
+### Beautifying the App
+
+Use bslib, fresh or CSS + Sass

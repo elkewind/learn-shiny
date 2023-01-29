@@ -31,6 +31,10 @@ sidebar <- dashboardSidebar(
 # dashboardBody ----
 body <- dashboardBody(
   
+  # set theme
+  fresh::use_theme("fresh_theme.css"),
+  
+  
   # tabItems ----
   tabItems(
     
@@ -42,7 +46,15 @@ body <- dashboardBody(
              
              box(width = NULL,
                  
-                 "background info here"
+                 title = tagList(icon("water"), 
+                                 tags$strong("Monitoring Fish Creek Watershed")),
+                 includeMarkdown("text/intro.md"),
+                 
+                 tags$img(src = "map.jpeg",
+                          alt = "Map of Fish Creek Watershed",
+                          style = "max-width: 100%;"),
+                 tags$h6(tags$em("Map Source:", 
+                                 tags$a(href = "http://www.fishcreekwatershed.org", "FCWO")), style = "text-align: center;")
                  
                  ), # END left-box
              
@@ -56,7 +68,8 @@ body <- dashboardBody(
                
                box(width = NULL,
                    
-                   "Data citation"
+                   title = tags$strong("Data Citation"),
+                   includeMarkdown("text/citation.md")
                    
                    ) # END box
                

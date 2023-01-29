@@ -1,0 +1,11 @@
+name: shiny-dashboard
+title:
+username:
+account: elkewind
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8151274
+bundleId: 6782331
+url: https://elkewind.shinyapps.io/shiny-dashboard/
+when: 1674854582.05169
+lastSyncTime: 1674854582.0517

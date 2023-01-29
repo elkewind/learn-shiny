@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif+Gujarati&display=swap");
+h1 {
+  color: #a8328b;
+  font-family: "Aboreto", cursive;
+}
+
+h3 {
+  color: #1aed41;
+  font-family: "Aboreto", cursive;
+}
+
+.box-body {
+  background-color: #383391;
+}

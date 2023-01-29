@@ -1,0 +1,24 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Serif+Gujarati&display=swap'); 
+  
+$aboreto: 'Aboreto', cursive;
+
+// sass variables
+$pink: #a8328b;
+$blue: #383391;
+$green: #1aed41;
+
+// css rules
+h1{
+  color: $pink;
+  font-family: $aboreto;
+}
+
+h3{
+  color: $green;
+  font-family: $aboreto;
+}
+
+.box-body {
+  background-color: $blue;
+}
